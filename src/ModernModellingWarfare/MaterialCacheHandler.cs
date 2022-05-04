@@ -324,7 +324,7 @@ namespace ModernModellingWarfare
                     {
                         var mtl = new InGameMaterial()
                         {
-                            Name   = reader.ReadString(),
+                            Name = reader.ReadString(),
                             Images = new List<InGameImage>(),
                         };
 
@@ -427,7 +427,7 @@ namespace ModernModellingWarfare
             {
                 foreach (var ingameImg in ingameMtl.Images)
                 {
-                    var result = $"{dir}\\{ingameImg.Name}.{ImageExtension}";
+                    var result = $"{dir}\\{ingameImg.Name}{Global.ImageExtension}";
 
                     switch (ingameImg.Type)
                     {
@@ -470,15 +470,15 @@ namespace ModernModellingWarfare
                             {
                                 using var image = new ScratchImage(new ScratchImageMetadata()
                                 {
-                                    Width      = (ulong)largestWidth,
-                                    Height     = (ulong)largestHeight,
-                                    Depth      = 1,
-                                    ArraySize  = 1,
-                                    MiscFlags  = ScratchImageFlags.None,
+                                    Width = (ulong)largestWidth,
+                                    Height = (ulong)largestHeight,
+                                    Depth = 1,
+                                    ArraySize = 1,
+                                    MiscFlags = ScratchImageFlags.None,
                                     MiscFlags2 = ScratchImageFlags2.NONE,
-                                    Dimension  = ScratchImageDimension.Texture2D,
-                                    MipLevels  = 1,
-                                    Format     = ingameImg.Format
+                                    Dimension = ScratchImageDimension.Texture2D,
+                                    MipLevels = 1,
+                                    Format = ingameImg.Format
                                 }, entry.Package.Extract(entry, largestSize));
 
                                 Directory.CreateDirectory(dir);
@@ -490,7 +490,7 @@ namespace ModernModellingWarfare
                                 Printer.WriteLine("MATERIAL", $"Exported Image: {ingameImg.Name}");
                             }
                         }
-                        catch(Exception e)
+                        catch (Exception e)
                         {
                             Global.DebugPrint($"Failed to export image: {e.Message}");
                         }

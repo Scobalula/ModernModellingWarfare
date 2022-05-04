@@ -97,7 +97,7 @@ namespace ModernModellingWarfare
                 var normals   = (GfxQTangent*)(xsurface.MeshBuffer->Buffer + xsurface.NormalsOffset);
                 var faces     = (GfxStreamFace*)(xsurface.MeshBuffer->Buffer + xsurface.TriOffset);
 
-                var mesh = new Mesh();
+                var mesh = new Mesh(xsurface.VertexCount, xsurface.FaceCount);
 
                 var mtl = new Material()
                 {

@@ -17,14 +17,6 @@ namespace ModernModellingWarfare
             Printer.WriteLine("LOADER", $"Loading: {Path.GetFileName(file)}...");
 
             using var ffStream = new FastFileStream(file);
-
-            using(var f = File.Create("test.dat"))
-            {
-                ffStream.CopyTo(f);
-            }
-
-            ffStream.Position = 0;
-
             using var zone = new Zone();
 
             try
@@ -125,7 +117,11 @@ namespace ModernModellingWarfare
                     {
                         if (args[i] == "--imageformat")
                         {
-                            MaterialCacheHandler.ImageExtension = args[i + 1];
+                            Global.Values["ImageExtension"] = args[i + 1];
+                        }
+                        else if (args[i] == "--debug")
+                        {
+                            Global.Values["DebugPrint"] = "yes";
                         }
                         else if (Directory.Exists(args[i]))
                         {
