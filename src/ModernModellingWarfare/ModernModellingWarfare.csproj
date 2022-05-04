@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ApplicationIcon>modelling.ico</ApplicationIcon>
+    <AssemblyName>ModernModellingWarfareX</AssemblyName>
+    <AssemblyVersion>0.0.4.0</AssemblyVersion>
+    <FileVersion>0.0.4.0</FileVersion>
+    <Description>Modern Warfare Fast File Model Exporter</Description>
+    <Company>Scobalula</Company>
+    <Authors>Scobalula</Authors>
+    <Version>0.0.4.0</Version>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="packages\**" />
+    <Compile Remove="x64\**" />
+    <EmbeddedResource Remove="packages\**" />
+    <EmbeddedResource Remove="x64\**" />
+    <None Remove="packages\**" />
+    <None Remove="x64\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="BinaryReaderExtensions.cs~RF23893d8.TMP" />
+    <None Remove="BinaryReaderExtensions.cs~RF23ee845.TMP" />
+    <None Remove="Program.cs~RF2331da7.TMP" />
+    <None Remove="Shared\XAssetList.cs~RF45878629.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CascLib.NET\CascLib.NET.csproj" />
+    <ProjectReference Include="..\PhilLibX.Imaging.DirectXTex\PhilLibX.Imaging.DirectXTex.vcxproj" />
+    <ProjectReference Include="..\PhilLibX\PhilLibX.csproj" />
+  </ItemGroup>
+
+</Project>

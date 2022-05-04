@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "ModernModellingWarfare": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\Admin\\Downloads\\MMWX\\mp_ay_attachment_vm_sm_mpapa5_reciever_tr.ff\"",
+      "nativeDebugging": true
+    }
+  }
+}
