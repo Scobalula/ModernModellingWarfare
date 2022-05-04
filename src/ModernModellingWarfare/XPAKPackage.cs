@@ -107,6 +107,7 @@ namespace ModernModellingWarfare
                         else if (chunkComp == 0)
                         {
                             chunkReader.Read(output, offset, chunkSize);
+                            remaining -= chunkSize;
                             offset += chunkSize;
                         }
                         else

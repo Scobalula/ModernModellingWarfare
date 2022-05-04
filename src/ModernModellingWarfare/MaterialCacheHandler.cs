@@ -492,7 +492,7 @@ namespace ModernModellingWarfare
                         }
                         catch (Exception e)
                         {
-                            Global.DebugPrint($"Failed to export image: {e.Message}");
+                            Printer.WriteLine("MATERIAL", $"Failed to export Image: {ingameImg.Name}: {e.Message}");
                         }
                     }
                 }

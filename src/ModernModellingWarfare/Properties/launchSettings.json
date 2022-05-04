@@ -2,7 +2,7 @@
   "profiles": {
     "ModernModellingWarfare": {
       "commandName": "Project",
-      "commandLineArgs": "\"G:\\VS\\ModernModellingWarfare\\src\\ModernModellingWarfare\\bin\\x64\\Release\\net6.0\\mp_hd_head_mp_s_dogg_01_l15_tr.ff\"",
+      "commandLineArgs": "\"C:\\Users\\Admin\\Documents\\x64\\mp_hd_head_mp_s_dogg_01_l15_tr.ff\"",
       "nativeDebugging": true
     }
   }
