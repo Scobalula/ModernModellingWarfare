@@ -70,10 +70,10 @@ namespace ModernModellingWarfare
 
                     model.Bones.Add(new(
                         zone.AssetList->StringList.GetByIndex(xmodel->BoneNames[i]),
-                        new Vector3(m.Trans.X * 2.54f, m.Trans.Y * 2.54f, m.Trans.Z * 2.54f),
-                        new Quaternion(m.Quat.X, m.Quat.Y, m.Quat.Z, m.Quat.W),
                         new Vector3(t.X, t.Y, t.Z),
                         new Quaternion(r.X, r.Y, r.Z, r.W),
+                        new Vector3(m.Trans.X, m.Trans.Y, m.Trans.Z),
+                        new Quaternion(m.Quat.X, m.Quat.Y, m.Quat.Z, m.Quat.W),
                         model.Bones[i - xmodel->ParentList[p]]));
 
                     p++;
